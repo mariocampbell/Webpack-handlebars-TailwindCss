@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#app {
+  position: relative;
+  opacity: 1;
+  transition: transform 300ms ease-out, opacity 300ms ease-out;
+}
+
+#app.transition {
+  transform: translateY(50px);
+  opacity: 0;
+}
