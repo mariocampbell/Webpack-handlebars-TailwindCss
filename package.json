@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariocampbell/webpack-project-base.git"
+    "url": "git+https://github.com/mariocampbell/Webpack-handlebars-TailwindCss.git"
   },
   "author": "Mario Campbell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mariocampbell/webpack-project-base/issues"
+    "url": "https://github.com/mariocampbell/Webpack-handlebars-TailwindCss.git/issues"
   },
-  "homepage": "https://github.com/mariocampbell/webpack-project-base#readme",
+  "homepage": "https://github.com/mariocampbell/Webpack-handlebars-TailwindCss#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/polyfill": "^7.6.0",
