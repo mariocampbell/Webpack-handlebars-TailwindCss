@@ -5,10 +5,23 @@ import page from 'page'
 document.addEventListener('DOMContentLoaded', () => {
     console.log(process.env.HELLO_WORLD)
     
-    const home = require('./views/pages/home.hbs')
+    const home = require('./views/pages/home.hbs'),
+          app = document.querySelector('#app')
+    
+    page('*', function(ctx, next){
+        if (ctx.init) {
+            next();
+        } else {
+            app.classList.add('transition');
+            setTimeout(function(){
+                app.classList.remove('transition');
+                next();
+            }, 300);
+        }
+    })
     
     page('/', () => {
-        document.querySelector('#app').innerHTML = home({})
+        app.innerHTML = home({})
     })
 
     page()
