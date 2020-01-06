@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             //Transitions between pages
             gsap.timeline()
-            .to(app, { duration: .4, autoAlpha: 0, y: 50, scale: 0.97, transformOrigin: "left top", ease: 'power2.out' })
-            .to(app, { duration: .4, autoAlpha: 1, y: 0, scale: 1, transformOrigin: "left top", ease: 'power2.out', delay: .2, onStart: () => next() })
+            .to(app, { duration: .4, autoAlpha: 0, scale: 0.97, transformOrigin: "center bottom", ease: 'power2.out' })
+            .to(app, { duration: .4, autoAlpha: 1, scale: 1, delay: 0.2, onStart: () => next() })
         }
     })
     
