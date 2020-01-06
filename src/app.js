@@ -1,6 +1,6 @@
 import Styles from './sass/styles.scss'
 import page from 'page'
-
+import gsap from 'gsap'
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log(process.env.HELLO_WORLD)
@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     page('*', function(ctx, next){
         if (ctx.init) {
-            next();
+            //Appear Pages
+            gsap.from(app, { duration: 1.2, autoAlpha: 0, ease: 'power2.in', onStart: () => next() })
         } else {
-            app.classList.add('transition');
-            setTimeout(function(){
-                app.classList.remove('transition');
-                next();
-            }, 300);
+            //Transitions between pages
+            gsap.timeline()
+            .to(app, { duration: .4, autoAlpha: 0, y: 50, scale: 0.97, transformOrigin: "left top", ease: 'power2.out' })
+            .to(app, { duration: .4, autoAlpha: 1, y: 0, scale: 1, transformOrigin: "left top", ease: 'power2.out', delay: .2, onStart: () => next() })
         }
     })
     
