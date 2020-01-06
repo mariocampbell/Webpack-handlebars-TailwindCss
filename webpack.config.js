@@ -29,7 +29,7 @@ module.exports = {
                     helperDirs: path.resolve(__dirname, 'src', 'helpers-hbs'),
                     partialDirs: [
                         path.resolve(__dirname, 'src', 'views'),
-                        path.resolve(__dirname, 'src', 'views', '00-elements'),
+                        path.resolve(__dirname, 'src', 'views', '00-atoms'),
                         path.resolve(__dirname, 'src', 'views', '01-components'),
                     ]
                 }
