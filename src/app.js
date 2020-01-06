@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     page('/', () => {
         app.innerHTML = home({})
     })
+    
+    page('*', () => {
+        app.innerHTML = '<h1 class="font-light text-3xl uppercase mt-16 ml-24" >Página no encontrada</h1>'
+    })
 
     page()
     
