@@ -1,10 +1,9 @@
 {
   "name": "webpack-base",
   "version": "1.0.0",
-  "description": "Proyecto base con webpack y handlebars",
+  "description": "Proyecto creado con Webpack, Handlebars y TailwindCSS con Page.js. Animado con GSAP",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server -d",
     "build": "webpack -p"
   },
@@ -42,6 +41,7 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
+    "gsap": "^3.0.4",
     "page": "^1.11.5",
     "tailwindcss": "^1.1.4"
   }
