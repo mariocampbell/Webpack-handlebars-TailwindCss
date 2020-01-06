@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     page('*', function(ctx, next){
         if (ctx.init) {
-            //Appear Pages
+            // load Pages
             gsap.from(app, { duration: 1.2, autoAlpha: 0, ease: 'power2.in', onStart: () => next() })
         } else {
-            //Transitions between pages
+            // transitions between pages
             gsap.timeline()
             .to(app, { duration: .4, autoAlpha: 0, scale: 0.97, transformOrigin: "center bottom", ease: 'power2.out' })
             .to(app, { duration: .4, autoAlpha: 1, scale: 1, delay: 0.2, onStart: () => next() })
